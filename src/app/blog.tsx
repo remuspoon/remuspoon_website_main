@@ -24,7 +24,7 @@ const BlogPage = () => {
                                 <BlogCard />
                             </div>
                             <div className='flex justify-center mb-40 mt-2'>
-                                <Button buttonText='View More' link='/blogPage'/>
+                                <Button buttonText='View More' link='/blogIndex'/>
                             </div>
                         </div>
                     </div>
