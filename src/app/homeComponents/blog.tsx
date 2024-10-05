@@ -9,7 +9,7 @@ const formatDate = (dateString: string) => {
 }
 
 const formatDescription = (description: string) => {
-    const truncatedDescription = description.substring(0, 100);
+    const truncatedDescription = description.substring(0, 120);
     const lastSpaceIndex = truncatedDescription.lastIndexOf(' ');
     return lastSpaceIndex !== -1 ? `${truncatedDescription.substring(0, lastSpaceIndex)}...` : `${truncatedDescription}...`;
 }
