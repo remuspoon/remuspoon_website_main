@@ -1,8 +1,8 @@
 import React from 'react'
-import Main from './main'
-import About from './about'
-import Blog from './blog'
-import Contact from './contact'
+import Main from './homeComponents/main'
+import About from './homeComponents/about'
+import Blog from './homeComponents/blog'
+import Contact from './homeComponents/contact'
 
 const Home = () => {
     return (

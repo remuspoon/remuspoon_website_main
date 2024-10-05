@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import HeadingImage from '../assets/home/Heading.png'
-import HeadingImageOutline from '../assets/home/HeadingOutline.png'
-import Hero from '../assets/home/Hero.jpg'
-import ScrollText from '../components/home/scrollText'
+import HeadingImage from '../../assets/home/Heading.png'
+import HeadingImageOutline from '../../assets/home/HeadingOutline.png'
+import Hero from '../../assets/home/Hero.jpg'
+import ScrollText from './scrollText'
 
 const Main = () => {
     return (
