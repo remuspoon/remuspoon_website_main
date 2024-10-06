@@ -14,7 +14,7 @@ export interface BlogCardType {
 
 const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mainImage, currentSlug, descriptionColor = 'text-dark', cardColor = '[#FFFBF2]', hoverShadow = false }) => {
   return (
-    <div className={`rounded-2xl hover:scale-105 transition-all duration-300 bg-${cardColor} m-5 ${hoverShadow ? 'hover:shadow-xl shadow-dark' : ''}`}>
+    <div className={`rounded-2xl hover:scale-105 transition-all duration-300 bg-${cardColor} lg:m-5 ${hoverShadow ? 'hover:shadow-xl shadow-dark' : ''}`}>
         <div className='flex flex-col max-w-full h-full'>
             <div className='w-full h-[250px] relative'>
               <Link href={`/blogs/${currentSlug}`}>
@@ -26,7 +26,7 @@ const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mai
                 />
               </Link>
             </div>
-            <div className='flex flex-col justify-between flex-grow md:px-10 py-5'>
+            <div className='flex flex-col justify-between flex-grow md:px-5 py-5'>
               <div className='flex flex-col gap-y-3'>
                 <Link href={`/blogs/${currentSlug}`}>
                   <h2 className='text-lg font-cabin font-bold italic text-accent tracking-tight leading-tight hover:underline'>

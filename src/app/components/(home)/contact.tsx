@@ -3,7 +3,7 @@ import { IoLogoInstagram, IoLogoLinkedin, IoLogoGithub, IoIosMail  } from "react
 
 const ContactPage = () => {
     return (
-        <div className='max-w-screen bg-accent' id='contact'>
+        <div className='max-w-screen bg-accent overflow-hidden' id='contact'>
             <div className='flex flex-col items-center justify-center py-32'>
                 <h1 className='text-2xl font-abril text-gray drop-shadow-md'>CONTACT<span className='text-light'>.</span></h1>
                 <div className='flex flex-row items-center justify-center gap-x-5'>
