@@ -1,6 +1,6 @@
 import React from 'react'
-import BlogCard, { BlogCardType } from './blogCard'
-import Button from './button'
+import BlogCard, { BlogCardType } from '../blogCard'
+import Button from '../button'
 import { client, urlFor } from '@/sanity/lib/client'
 
 const formatDate = (dateString: string) => {
@@ -23,7 +23,7 @@ const formatTitle = (title: string) => {
 }
 
 async function getBlogs() {
-    const query = `*[_type == 'post'] | order(publishedAt desc)[0...3] {
+    const query = `*[_type == 'post'] | order(publishedAt desc)[0...4] {
   title,
   publishedAt,
   "currentSlug": slug.current,
@@ -54,11 +54,18 @@ const BlogPage = async () => {
                         <div className='flex flex-col gap-y-16'>
                             <div className='flex flex-row w-full justify-between'>
                                 {blogs.map((post, index) => (
-                                    <BlogCard key={index} title={formatTitle(post.title)} description={formatDescription(post.description)} publishedAt={formatDate(post.publishedAt)} mainImage={urlFor(post.mainImage).url()} />
+                                    <BlogCard 
+                                    key={index} 
+                                    title={formatTitle(post.title)} 
+                                    description={formatDescription(post.description)} 
+                                    publishedAt={formatDate(post.publishedAt)} 
+                                    mainImage={urlFor(post.mainImage).url()} 
+                                    currentSlug={post.currentSlug}
+                                    />
                                 ))}
                             </div>
                             <div className='flex justify-center mb-40'>
-                                <Button buttonText='View More' link='/blogIndex'/>
+                                <Button buttonText='View More' link='/blogs'/>
                             </div>
                         </div>
                     </div>

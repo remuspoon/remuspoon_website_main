@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import HeadingImage from '../../assets/home/Heading.png'
-import HeadingImageOutline from '../../assets/home/HeadingOutline.png'
-import Hero from '../../assets/home/Hero.jpg'
+import HeadingImage from '../../../assets/home/Heading.png'
+import HeadingImageOutline from '../../../assets/home/HeadingOutline.png'
+import Hero from '../../../assets/home/Hero.jpg'
 import ScrollText from './scrollText'
 
 const Main = () => {
@@ -25,9 +25,9 @@ const Main = () => {
                         {/* Menu */}
                         <div className='absolute top-1/3'>
                             <ul className='flex flex-col justify-start gap-y-2 bg-gray px-20 py-8 select-none '>
-                                <li><a href="#blog" className='text-light font-cabin font-bold italic text-xl tracking-tight'>BLOGS</a></li>
-                                <li><a href="#about" className='text-light font-cabin font-bold italic text-xl tracking-tight'>ABOUT</a></li>
-                                <li><a href="#contact" className='text-light font-cabin font-bold italic text-xl tracking-tight'>CONTACT</a></li>
+                                <li><a href="#blog" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
+                                <li><a href="#about" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>ABOUT</a></li>
+                                <li><a href="#contact" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>CONTACT</a></li>
                             </ul>
                         </div>
                         {/* Hero */}

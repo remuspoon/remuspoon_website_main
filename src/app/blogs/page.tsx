@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogCard, { BlogCardType } from '../homeComponents/blogCard'
+import BlogCard, { BlogCardType } from '../components/blogCard'
 import { client, urlFor } from '@/sanity/lib/client'
 
 const formatDate = (dateString: string) => {
@@ -51,6 +51,7 @@ const BlogPage = async () => {
                                     description={formatDescription(post.description)} 
                                     publishedAt={formatDate(post.publishedAt)} 
                                     mainImage={urlFor(post.mainImage).url()} 
+                                    currentSlug={post.currentSlug}
                                     descriptionColor='text-light'
                                     cardColor='gray'
                                     hoverShadow={true}
