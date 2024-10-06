@@ -9,7 +9,7 @@ const formatDate = (dateString: string) => {
 }
 
 const formatDescription = (description: string) => {
-    const truncatedDescription = description.substring(0, 120);
+    const truncatedDescription = description.substring(0, 100);
     const lastSpaceIndex = truncatedDescription.lastIndexOf(' ');
     return lastSpaceIndex !== -1 ? `${truncatedDescription.substring(0, lastSpaceIndex)}...` : `${truncatedDescription}...`;
 }
@@ -23,7 +23,7 @@ const formatTitle = (title: string) => {
 }
 
 async function getBlogs() {
-    const query = `*[_type == 'post'] | order(publishedAt desc)[0..3] {
+    const query = `*[_type == 'post'] | order(publishedAt desc)[0...3] {
   title,
   publishedAt,
   "currentSlug": slug.current,
@@ -51,13 +51,13 @@ const BlogPage = async () => {
                 <div id='blog' className='col-start-2 col-span-10'>
                     <div className='flex flex-col'>
                         <h1 className=' text-2xl font-abril text-gray drop-shadow-md tracking-tighter'>BLOGS<span className='text-accent'>.</span></h1>
-                        <div className='flex flex-col gap-y-5'>
+                        <div className='flex flex-col gap-y-16'>
                             <div className='flex flex-row w-full justify-between'>
                                 {blogs.map((post, index) => (
                                     <BlogCard key={index} title={formatTitle(post.title)} description={formatDescription(post.description)} publishedAt={formatDate(post.publishedAt)} mainImage={urlFor(post.mainImage).url()} />
                                 ))}
                             </div>
-                            <div className='flex justify-center mb-40 mt-2'>
+                            <div className='flex justify-center mb-40'>
                                 <Button buttonText='View More' link='/blogIndex'/>
                             </div>
                         </div>

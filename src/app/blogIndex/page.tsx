@@ -38,12 +38,12 @@ const BlogPage = async () => {
     const blogs: BlogCardType[] = await getBlogs()
 
     return (
-        <div>
-            <div className='min-h-screen px-5 overflow-x-clip pb-20'>
+        <div className='bg-gray grid grid-cols-12'>
+            <div className='min-h-screen px-5 overflow-x-clip pb-20 col-start-2 col-span-10'>
                 <div id='blog' className='container mx-auto'>
                     <div className='flex flex-col'>
-                        <h1 className='text-2xl font-abril text-light drop-shadow-md text-center tracking-tighter mb-8'>ALL BLOGS<span className='text-accent'>.</span></h1>
-                        <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                        <h1 className='text-[8rem] lg:text-2xl font-abril text-light drop-shadow-md text-center tracking-tighter mb-8 leading-none pb-10'>ALL BLOGS<span className='text-accent'>.</span></h1>
+                        <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
                             {blogs.map((post, index) => (
                                 <BlogCard 
                                     key={index} 
@@ -52,6 +52,8 @@ const BlogPage = async () => {
                                     publishedAt={formatDate(post.publishedAt)} 
                                     mainImage={urlFor(post.mainImage).url()} 
                                     descriptionColor='text-light'
+                                    cardColor='gray'
+                                    hoverShadow={true}
                                 />
                             ))}
                         </div>
