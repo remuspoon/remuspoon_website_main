@@ -6,7 +6,7 @@ import Contact from './components/(home)/contact'
 
 const Home = () => {
     return (
-        <div>
+        <div className='flex flex-col'>
             <Main />
             <Blog />
             <About />
