@@ -7,8 +7,8 @@ import ScrollText from './scrollText'
 
 const Main = () => {
     return (
-        <div id='home' className='min-h-full max-h-screen max-w-screen bg-dark flex flex-col lg:grid lg:grid-rows-4 overflow-hidden'>
-            <div className='lg:row-span-3 lg:grid lg:grid-cols-12 gap-x-5 px-5 bg-gray overflow-x-clip h-full pb-40 lg:pb-0'>
+        <div id='home' className='min-h-screen max-h-screen max-w-screen bg-dark flex flex-col lg:grid lg:grid-rows-4 overflow-hidden'>
+            <div className='lg:row-span-3 lg:grid lg:grid-cols-12 gap-x-5 px-5 bg-gray overflow-x-clip h-full pb-40 lg:pb-0 pt-5 lg:pt-0'>
                 <div className='lg:col-start-2 lg:col-span-10'>
                     <div className='relative'>
                         {/* Heading and Background */}
@@ -23,7 +23,7 @@ const Main = () => {
                             </div>
                         </div>
                         
-                        {/* Large ScreenMenu */}
+                        {/* Large Screen Menu */}
                         <div className='absolute top-1/3 hidden lg:block'>
                             <ul className='flex flex-col justify-start gap-y-2 bg-gray px-20 py-8 select-none '>
                                 <li><a href="#blog" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
@@ -38,14 +38,14 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/* Small Screen Menu */}
+            {/* Small & Medium Screen Menu */}
             <div className='lg:hidden'>
                 <ul className='flex flex-row flex-wrap justify-center bg-gray select-none py-10 max-w-screen gap-x-5 gap-y-2 px-5'>
-                    <li><a href="#blog" className='text-light font-cabin font-bold italic text-lg tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
-                    <p className='text-light font-cabin font-bold italic text-lg tracking-tight'>·</p>
-                    <li><a href="#about" className='text-light font-cabin font-bold italic text-lg tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>ABOUT</a></li>
-                    <p className='text-light font-cabin font-bold italic text-lg tracking-tight'>·</p>
-                    <li><a href="#contact" className='text-light font-cabin font-bold italic text-lg tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>CONTACT</a></li>
+                    <li><a href="#blog" className='text-light font-cabin font-bold italic text-lg md:text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
+                    <p className='text-light font-cabin font-bold italic text-lg md:text-xl tracking-tight'>·</p>
+                    <li><a href="#about" className='text-light font-cabin font-bold italic text-lg md:text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>ABOUT</a></li>
+                    <p className='text-light font-cabin font-bold italic text-lg md:text-xl tracking-tight'>·</p>
+                    <li><a href="#contact" className='text-light font-cabin font-bold italic text-lg md:text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>CONTACT</a></li>
                 </ul>
             </div>
             {/* Bottom Bar */}
@@ -56,7 +56,7 @@ const Main = () => {
                         <ScrollText />
                     </div>
                     <div className='grid grid-cols-2'>
-                        <div className='col-span-1 h-20 lg:h-40 mt-5 border-accent border-r-2'></div>
+                        <div className='col-span-1 h-56 md:h-64 lg:h-40 mt-5 border-accent border-r-2'></div>
                     </div>
                 </div>
             </div>
