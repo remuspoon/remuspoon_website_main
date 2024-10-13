@@ -12,7 +12,7 @@ export interface BlogCardType {
   hoverShadow?: boolean;
 }
 
-const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mainImage, currentSlug, descriptionColor = 'text-dark', cardColor = '[#FFFBF2]', hoverShadow = false }) => {
+const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mainImage, currentSlug, descriptionColor = 'text-dark', cardColor = 'white', hoverShadow = false }) => {
   return (
     <div className={`rounded-2xl hover:scale-105 transition-all duration-300 bg-${cardColor} lg:m-5 ${hoverShadow ? 'hover:shadow-xl shadow-dark' : ''}`}>
         <div className='flex flex-col max-w-full h-full'>

@@ -61,6 +61,7 @@ const BlogPage = async () => {
                                     publishedAt={formatDate(post.publishedAt)} 
                                     mainImage={urlFor(post.mainImage).url()} 
                                     currentSlug={post.currentSlug}
+                                    hoverShadow={true}
                                     />
                                 ))}
                             </div>

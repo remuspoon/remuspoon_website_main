@@ -25,7 +25,8 @@ module.exports = {
         gray: '#1E1F23',
         main: '#FFB812',
         accent: '#F96F5D',
-        lightGray: '#666666'
+        lightGray: '#666666',
+        white: '#FFFBF2',
       },
       keyframes: {
         jump: {
