@@ -62,7 +62,7 @@ const BlogPage = async () => {
                                     mainImage={urlFor(post.mainImage).url()} 
                                     currentSlug={post.currentSlug}
                                     descriptionColor='text-light'
-                                    cardColor='gray'
+                                    cardColor='bg-gray'
                                     hoverShadow={true}
                                 />
                             ))}
