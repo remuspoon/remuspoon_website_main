@@ -68,7 +68,7 @@ const BlogPage = async () => {
                                     ))}
                                 </div>
                                 {/* Medium screen blogs */}
-                                <div className='hidden md:grid md:grid-cols-2 w-full gap-x-5'>
+                                <div className='hidden lg:hidden md:grid md:grid-cols-2 w-full gap-x-5'>
                                     {blogs.map((post, index) => (
                                         <BlogCard 
                                             key={index} 
