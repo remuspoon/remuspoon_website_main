@@ -50,7 +50,7 @@ const BlogPage = async () => {
             <div className=' min-h-screen grid grid-cols-12 gap-x-5 px-5 bg-light  overflow-x-clip'>
                 <div id='blog' className='col-start-1 col-span-12 lg:col-start-2 lg:col-span-10'>
                     <div className='flex flex-col'>
-                        <h1 className='text-xl md:text-[8rem] lg:text-2xl font-abril text-gray drop-shadow-md tracking-tighter pt-10 lg:pt-0'>BLOGS<span className='text-accent'>.</span></h1>
+                        <h1 className='text-[6rem] md:text-[8rem] lg:text-2xl font-abril text-gray drop-shadow-md tracking-tighter pt-10 lg:pt-0'>BLOGS<span className='text-accent'>.</span></h1>
                         <div className='flex flex-col gap-y-16'>
                             <div className='flex flex-col lg:flex-row w-full justify-between'>
                                 {/* Large screen blogs */}

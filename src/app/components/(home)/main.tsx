@@ -7,12 +7,12 @@ import ScrollText from './scrollText'
 
 const Main = () => {
     return (
-        <div id='home' className='min-h-screen max-h-screen max-w-screen bg-dark flex flex-col lg:grid lg:grid-rows-4 overflow-hidden'>
-            <div className='lg:row-span-3 lg:grid lg:grid-cols-12 gap-x-5 px-5 bg-gray overflow-x-clip h-full pb-40 lg:pb-0 pt-5 lg:pt-0'>
+        <div id='home' className=' max-h-full max-w-screen bg-dark flex flex-col lg:grid lg:grid-rows-4 overflow-hidden'>
+            <div className='lg:row-span-3 lg:grid lg:grid-cols-12 gap-x-5 px-2 bg-gray overflow-x-clip h-full pb-40 lg:pb-0 pt-5 lg:pt-0'>
                 <div className='lg:col-start-2 lg:col-span-10'>
                     <div className='relative'>
                         {/* Heading and Background */}
-                        <div className='lg:grid lg:grid-cols-10 gap-x-5 px-5 lg:px-0'>
+                        <div className='lg:grid lg:grid-cols-10 gap-x-5 lg:px-0'>
                             <div className='flex flex-col justify-start gap-y-2 col-span-8 min-w-full lg:min-w-[800px]'>
                                 <Image src={HeadingImage} alt='Heading' className='drop-shadow-md z-40 select-none' />
                                 <div className='flex flex-col justify-start gap-y-2 '>
@@ -49,7 +49,7 @@ const Main = () => {
                 </ul>
             </div>
             {/* Bottom Bar */}
-            <div className='row-span-1 grid grid-cols-2 lg:grid-cols-5 h-full gap-x-5 px-5 pt-5 bg-dark overflow-y-clip '>
+            <div className='row-span-1 grid grid-cols-2 lg:grid-cols-5 h-full gap-x-5 px-5 pt-5 bg-dark '>
                 <div className= 'col-start-1 col-span-2 flex flex-col justify-end'>
                     {/* Scroll Animation*/}
                     <div className='flex flex-col justify-center text-center'>
