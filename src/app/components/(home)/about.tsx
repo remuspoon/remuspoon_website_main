@@ -15,27 +15,33 @@ const AboutPage = () => {
                 <div className='grid grid-cols-12 gap-x-5 px-5 w-screen pb-32'>
                     {/* Large Screen About Page */}
                     <div className='hidden col-start-2 col-span-10 lg:grid grid-rows-3 pb-36 gap-y-72 mb-32'>
-                        <div className='row-span-1 flex flex-row justify-between items-center gap-x-52 pr-10 border-r-4 border-main'>
+                        <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <div>
                                 <h1 className='text-xl font-cabin font-bold italic text-light '>Who am I</h1>
-                                <p className='text-light font-cabin text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                <p className='text-light font-cabin text-base'>Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p>
                             </div>
-                            <Image src={Image1} alt='Image1' width={600} height={400} className='object-cover object-center rounded-xl' />
+                            <div className='border-r-4 border-main pr-10 flex justify-end w-full'>
+                                <Image src={Image1} alt='Image1' className='object-cover rounded-xl w-full' />
+                            </div>
                         </div>
-                        <div className='row-span-1 flex flex-row justify-between items-center gap-x-52 pl-10 border-l-4 border-main'>
-                            <Image src={Image1} alt='Image1' width={600} height={400} className='object-cover object-center rounded-xl' />    
+                        <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
+                            <div className='border-l-4 border-main pl-10 flex justify-start w-full'>
+                                <Image src={Image1} alt='Image1' className='object-cover rounded-xl w-full' />
+                            </div>
                             <div>
-                                <h1 className='text-xl font-cabin font-bold italic text-light'>What I do</h1>
-                                <p className='text-light font-cabin text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                <h1 className='text-xl font-cabin font-bold italic text-light '>Who am I</h1>
+                                <p className='text-light font-cabin text-base'>Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p>
                             </div>
                             
                         </div>
-                        <div className='row-span-1 flex flex-row justify-between items-center gap-x-52 pr-10 border-r-4 border-main'>
+                        <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <div>
-                                <h1 className='text-xl font-cabin font-bold italic text-light'>My interests</h1>
-                                <p className='text-light font-cabin text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                <h1 className='text-xl font-cabin font-bold italic text-light '>Who am I</h1>
+                                <p className='text-light font-cabin text-base'>Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p>
                             </div>
-                            <Image src={Image3} alt='Image3' width={600} height={400} className='object-cover object-center rounded-xl' />
+                            <div className='border-r-4 border-main pr-10 flex justify-end w-full'>
+                                <Image src={Image1} alt='Image1' className='object-cover rounded-xl w-full' />
+                            </div>
                         </div>
                     </div>
 

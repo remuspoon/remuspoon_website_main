@@ -54,7 +54,7 @@ const BlogPage = async () => {
                         <div className='flex flex-col gap-y-16'>
                             <div className='flex flex-col lg:flex-row w-full justify-between'>
                                 {/* Large screen blogs */}
-                                <div className='hidden lg:flex lg:flex-row w-full justify-between'>
+                                <div className='hidden lg:grid lg:grid-cols-4 w-full justify-between'>
                                     {blogs.map((post, index) => (
                                         <BlogCard 
                                             key={index} 
@@ -96,7 +96,7 @@ const BlogPage = async () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className='flex justify-center mb-20 lg:mb-32'>
+                            <div className='flex justify-center mb-20'>
                                 <Button buttonText='View More' link='/blogs'/>
                             </div>
                         </div>

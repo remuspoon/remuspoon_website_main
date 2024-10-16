@@ -7,15 +7,15 @@ import ScrollText from './scrollText'
 
 const Main = () => {
     return (
-        <div id='home' className=' max-h-full max-w-screen bg-dark flex flex-col lg:grid lg:grid-rows-4 overflow-hidden'>
-            <div className='lg:row-span-3 lg:grid lg:grid-cols-12 gap-x-5 px-2 bg-gray overflow-x-clip h-full pb-40 lg:pb-0 pt-5 lg:pt-0'>
+        <div id='home' className=' max-h-full max-w-screen flex flex-col lg:flex-rowoverflow-hidden'>
+            <div className='lg:row-span-2 lg:grid lg:grid-cols-12 gap-x-5 px-2 bg-gray overflow-x-clip h-full mb-36 md:mb-16 lg:mb-0 lg:pb-0 pt-5 lg:pt-0'>
                 <div className='lg:col-start-2 lg:col-span-10'>
                     <div className='relative'>
                         {/* Heading and Background */}
                         <div className='lg:grid lg:grid-cols-10 gap-x-5 lg:px-0'>
                             <div className='flex flex-col justify-start gap-y-2 col-span-8 min-w-full lg:min-w-[800px]'>
                                 <Image src={HeadingImage} alt='Heading' className='drop-shadow-md z-40 select-none' />
-                                <div className='flex flex-col justify-start gap-y-2 '>
+                                <div className='flex flex-col justify-start gap-y-2 pb-10'>
                                     <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-75 select-none' />
                                     <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-50 select-none' />
                                     <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-25 select-none' />
@@ -25,10 +25,10 @@ const Main = () => {
                         
                         {/* Large Screen Menu */}
                         <div className='absolute top-1/3 hidden lg:block'>
-                            <ul className='flex flex-col justify-start gap-y-2 bg-gray px-20 py-8 select-none '>
-                                <li><a href="#blog" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
-                                <li><a href="#about" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>ABOUT</a></li>
-                                <li><a href="#contact" className='text-light font-cabin font-bold italic text-xl tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>CONTACT</a></li>
+                            <ul className='flex flex-col justify-start gap-y-2 bg-gray px-20 py-4 select-none '>
+                                <li><a href="#blog" className='text-light font-cabin font-bold italic text-[3.5rem] tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>BLOGS</a></li>
+                                <li><a href="#about" className='text-light font-cabin font-bold italic text-[3.5rem] tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>ABOUT</a></li>
+                                <li><a href="#contact" className='text-light font-cabin font-bold italic text-[3.5rem] tracking-tight hover:text-main inline-block hover:scale-105 transition-all duration-300'>CONTACT</a></li>
                             </ul>
                         </div>
                         {/* Hero */}
