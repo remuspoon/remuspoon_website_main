@@ -15,7 +15,9 @@ export default function RootLayout({
     <html lang="en">
       <body className='bg-gray'>
         <Navbar />
-        {children}
+        <main className='mt-[-5rem]'>
+          {children}
+        </main>
       </body>
     </html>
   )
