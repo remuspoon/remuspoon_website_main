@@ -7,18 +7,18 @@ import ScrollText from './scrollText'
 
 const Main = () => {
     return (
-        <div id='home' className=' max-h-full max-w-screen flex flex-col lg:flex-rowoverflow-hidden'>
+        <div id='home' className=' max-h-full max-w-screen flex flex-col lg:flex-rowoverflow-hidden pt-20'>
             <div className='lg:row-span-2 lg:grid lg:grid-cols-12 gap-x-5 px-2 bg-gray overflow-x-clip h-full mb-36 md:mb-16 lg:mb-0 lg:pb-0 pt-5 lg:pt-0'>
                 <div className='lg:col-start-2 lg:col-span-10'>
                     <div className='relative'>
                         {/* Heading and Background */}
                         <div className='lg:grid lg:grid-cols-10 gap-x-5 lg:px-0'>
                             <div className='flex flex-col justify-start gap-y-2 col-span-8 min-w-full lg:min-w-[800px]'>
-                                <Image src={HeadingImage} alt='Heading' className='drop-shadow-md z-40 select-none' />
+                                <Image src={HeadingImage} priority alt='Heading' className='drop-shadow-md z-40 select-none' />
                                 <div className='flex flex-col justify-start gap-y-2 pb-10'>
-                                    <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-75 select-none' />
-                                    <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-50 select-none' />
-                                    <Image src={HeadingImageOutline} alt="HeadingOutlined" className='opacity-25 select-none' />
+                                    <Image src={HeadingImageOutline} priority alt="HeadingOutlined" className='opacity-75 select-none' />
+                                    <Image src={HeadingImageOutline} priority alt="HeadingOutlined" className='opacity-50 select-none' />
+                                    <Image src={HeadingImageOutline} priority alt="HeadingOutlined" className='opacity-25 select-none' />
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ const Main = () => {
                         </div>
                         {/* Hero */}
                         <div className='absolute top-5 left-1/2 transform -translate-x-1/2 w-full lg:w-2/5 lg:left-auto lg:transform-none lg:top-14 lg:right-0'>
-                            <Image src={Hero} alt='Hero' className='mx-auto lg:mx-0 w-3/4 lg:w-full max-w-[400px] lg:max-w-none z-30 rounded-lg select-none' />
+                            <Image src={Hero} priority alt='Hero' className='mx-auto lg:mx-0 w-3/4 lg:w-full max-w-[400px] lg:max-w-none z-30 rounded-lg select-none' />
                         </div>
                     </div>
                 </div>
