@@ -39,7 +39,7 @@ const BlogPage = async () => {
 
     return (
         <div className='bg-gray 
-        md:grid md:grid-cols-12'>
+        md:grid md:grid-cols-12 pt-20'>
             <div className='min-h-screen px-5 overflow-x-clip pb-20 
             md:col-start-2 md:col-span-10
             '>
