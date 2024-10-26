@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
 export interface BlogCardType {
   title: string;
   description: string;
@@ -14,14 +15,14 @@ export interface BlogCardType {
 
 const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mainImage, currentSlug, descriptionColor = 'text-dark', cardColor = 'bg-white', hoverShadow = false }) => {
   return (
-    <div className={`rounded-2xl hover:scale-105 transition-all duration-300 ${cardColor} m-0 mt-5 lg:m-5 lg:mt-0 ${hoverShadow ? 'hover:shadow-xl shadow-dark' : ''}`}>
+    <div className={`rounded-2xl overflow-hidden transition-all duration-300 ${cardColor} m-0 mt-5 lg:m-5 lg:mt-0 ${hoverShadow ? 'hover:shadow-xl shadow-dark' : ''}`}>
         <div className='flex flex-col max-w-full h-full'>
-            <div className='w-full h-[250px] relative'>
+            <div className='w-full h-[250px] relative overflow-hidden'>
               <Link href={`/blogs/${currentSlug}`}>
                 <Image 
                   src={mainImage} 
                   alt="image" 
-                  className='object-cover object-top rounded-t-2xl'
+                  className='object-cover object-top rounded-t-2xl hover:scale-105 transition-all duration-300'
                   fill
                 />
               </Link>
