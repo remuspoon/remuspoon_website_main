@@ -13,6 +13,9 @@ module.exports = {
       '2xl': '12rem',
     },
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       dropShadow: {
         'md': '0 4px 4px rgba(0, 0, 0, .4)',
       },
