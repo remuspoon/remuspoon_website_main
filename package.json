@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
     "@portabletext/react": "^3.1.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.57.4",
+    "motion": "^11.13.1",
     "next": "14.2.13",
     "next-sanity": "^9.5.0",
     "react": "^18",

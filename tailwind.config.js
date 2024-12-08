@@ -10,7 +10,7 @@ module.exports = {
       base: '1.25rem',
       lg: '2rem',
       xl: '4rem',
-      '2xl': '12rem',
+      '2xl': '9.5rem',
     },
     extend: {
       aspectRatio: {
@@ -41,8 +41,26 @@ module.exports = {
       animation: {
         jump: 'jump 4s ease-in-out infinite',
       },
-      
+      textStroke: {
+        'white': '1px white',
+      }
     },
   },
-  plugins: [typography],
+  plugins: [
+    typography,
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.text-outline': {
+          '@screen sm': {
+            '-webkit-text-stroke': '1px #FFB812',
+          },
+          '@screen md': {
+            '-webkit-text-stroke': '2px #FFB812',
+          },
+          'color': 'transparent',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ]
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const ScrollText = () => {
     return (
-        <div className='mt-3 relative text-base font-cabin'>
+        <div className='mt-3 relative text-sm font-cabin'>
             {['S', 'C', 'R', 'O', 'L', 'L'].map((letter, index) => (
                 <span 
                     key={index} 
