@@ -17,9 +17,10 @@ interface ParallaxProps {
   baseVelocity: number;
   outline?: boolean;
   color?: string;
+  opacity?: string;
 }
 
-function ParallaxText({ children, baseVelocity = 100, outline = false, color = "light" }: ParallaxProps) {
+function ParallaxText({ children, baseVelocity = 100, outline = false, color = "light", opacity = '100' }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -65,9 +66,10 @@ function ParallaxText({ children, baseVelocity = 100, outline = false, color = "
    * dynamically generated number of children.
    */
   return (
-    <div className={`overflow-hidden -tracking-wider leading-[0.8] m-0 whitespace-nowrap flex flex-nowrap`}>
+    <div className={`overflow-hidden -tracking-wider leading-[0.8] m-0 whitespace-nowrap flex flex-nowrap 
+    ${opacity ? `opacity-${opacity}` : ''}`}>
       <motion.div 
-        className={`uppercase text-[10vh] lg:text-[20vh] flex whitespace-nowrap flex-nowrap font-abril shadow-xl
+        className={`uppercase text-[6rem] lg:text-xl flex whitespace-nowrap flex-nowrap font-abril
           ${outline ? 'text-outline' : ''} 
           ${color ? `text-${color}` : ''}`} 
         style={{ x }}

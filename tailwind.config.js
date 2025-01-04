@@ -51,12 +51,7 @@ module.exports = {
     function({ addUtilities }) {
       const newUtilities = {
         '.text-outline': {
-          '@screen sm': {
-            '-webkit-text-stroke': '1px #FFB812',
-          },
-          '@screen md': {
-            '-webkit-text-stroke': '2px #FFB812',
-          },
+          '-webkit-text-stroke': '2px #FFB812',
           'color': 'transparent',
         },
       }

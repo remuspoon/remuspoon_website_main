@@ -13,12 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-gray'>
+    <body className='bg-gray w-full overflow-x-hidden'>
         <Navbar />
-        <main className='mt-[-5rem]'>
+        <main className='mt-[-4rem]'>
           {children}
         </main>
-      </body>
+        </body>
     </html>
   )
 }
