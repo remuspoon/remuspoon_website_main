@@ -42,7 +42,7 @@ const BlogPage = async () => {
     const blogs: BlogCardType[] = await getBlogs()
 
     return (
-        <div>
+        <div id='blog'>
             <div className='hidden row-span-1 lg:grid grid-cols-2 lg:grid-cols-5 gap-x-5 px-5 bg-light overflow-y-clip w-full'>
                 <div className= 'col-start-1 col-span-2 flex flex-col justify-start'>
                     <div className='grid grid-cols-2'>
@@ -51,7 +51,7 @@ const BlogPage = async () => {
                 </div>
             </div>
             <div className=' grid grid-cols-12 gap-x-5 px-5 bg-light  overflow-x-clip'>
-                <div id='blog' className='col-start-1 col-span-12 lg:col-start-2 lg:col-span-10'>
+                <div className='col-start-1 col-span-12 lg:col-start-2 lg:col-span-10'>
                     <div className='flex flex-col'>
                         <motion.div initial={{opacity: 0, y: -50}} whileInView={{opacity: 1, y: 0}} transition={{duration: .5}} viewport={{once: true}} className='w-full h-full text-white'>
                             <h1 className='text-[6rem] md:text-[8rem] lg:text-2xl font-abril text-gray drop-shadow-md tracking-tighter pt-10 lg:pt-0'>BLOGS<span className='text-accent'>.</span></h1>
