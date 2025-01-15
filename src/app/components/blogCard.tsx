@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { urlFor } from '@/sanity/lib/image';
 export interface BlogCardType {
   title: string;
   description: string;
   publishedAt: string;
-  mainImage: any;
+  mainImage: string;
   currentSlug: string;
   descriptionColor?: string;
   cardColor?: string;
@@ -19,8 +20,8 @@ const BlogCard: React.FC<BlogCardType> = ({ title, description, publishedAt, mai
             <div className='w-full h-[200px] relative'>
               <Link href={`/blogs/${currentSlug}`}>
                 <Image 
-                  src={mainImage} 
-                  alt="image" 
+                  src={urlFor(mainImage).url()} 
+                  alt={title} 
                   className='object-cover object-top rounded-t-2xl'
                   fill
                 />

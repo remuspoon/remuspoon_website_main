@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Image1 from '../../../assets/about/AboutPageImage1.jpg'
-import Image3 from '../../../assets/about/AboutPageImage3.jpg'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 

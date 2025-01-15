@@ -3,8 +3,7 @@
 import React from 'react'
 import ProfileImage from '../../../assets/blogs/author_card_profile_pic.jpeg'
 import Image from 'next/image'
-import Link from 'next/link'
-import { IoLogoInstagram, IoLogoLinkedin, IoLogoGithub, IoIosMail  } from "react-icons/io";
+import { IoLogoInstagram, IoLogoLinkedin, IoIosMail  } from "react-icons/io";
 const AuthorCard = () => {
   return (
     <div className="flex flex-col md:flex-row border-t gap-x-5 gap-y-5 items-center border-lightGray py-16">
@@ -13,10 +12,10 @@ const AuthorCard = () => {
         </div>
         <div className='w-full md:w-4/5 flex flex-col gap-y-3 justify-center px-5'>
             <h1 className='text-lg font-cabin font-bold tracking-tight leading-tight text-dark text-center md:text-left'>
-                Let's Chat!
+                Let&apos;s Chat!
             </h1>
             <p className='text-md text-gray-500 font-cabin text-gray text-center md:text-left'>
-                Hey if you liked what you read, have a question, or just want to say hi, I'd love to hear from you!
+                Hey if you liked what you read, have a question, or just want to say hi, I&apos;d love to hear from you!
             </p>
             <div className='flex flex-row gap-x-2 justify-center md:justify-start   '>
                     <a href="https://www.instagram.com/remuspn/" target='_blank' rel='noopener noreferrer'>

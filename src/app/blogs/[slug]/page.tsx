@@ -1,5 +1,5 @@
 import { client } from '@/sanity/lib/client'
-import { PortableText } from '@portabletext/react'
+import { PortableText, PortableTextBlock } from '@portabletext/react'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 import AuthorCard from './authorCard'
@@ -8,8 +8,8 @@ export interface BlogPageType {
     currentSlug: string;
     title: string;
     publishedAt: string;
-    body: any;
-    mainImage: any;
+    body: PortableTextBlock[];
+    mainImage: string;
 }
 
 async function getData(slug: string) {
@@ -32,7 +32,7 @@ const formatDate = (dateString: string) => {
 export default async function BlogPage({params}: {params: {slug: string}}) {
     const data: BlogPageType = await getData(params.slug)
     return (
-        <div className='bg-white pt-32 lg:pt-56'>
+        <div className='bg-white pt-32 lg:pt-56 mt-[-100px]'>
             <div className='grid grid-cols-12'>
                 <div className='col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 flex flex-col gap-y-10'>
                     <div className='flex flex-col justify-center gap-y-5'>

@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogCard, { BlogCardType } from '../blogCard'
 import Button from '../button'
 import { client, urlFor } from '@/sanity/lib/client'
@@ -38,8 +38,16 @@ async function getBlogs() {
     return blogs
 }
 
-const BlogPage = async () => {
-    const blogs: BlogCardType[] = await getBlogs()
+const BlogPage = () => {
+    const [blogs, setBlogs] = useState<BlogCardType[]>([])
+
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            const data = await getBlogs()
+            setBlogs(data)
+        }
+        fetchBlogs()
+    }, [])
 
     return (
         <div id='blog'>
