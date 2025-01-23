@@ -39,7 +39,7 @@ const AboutPage = () => {
                         </div>
                         <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <motion.div initial={{opacity: 0, x:-100}} whileInView={{opacity: 1, x:0}} transition={{duration: 1}} viewport={{once: true}}>
-                                <h1 className='text-xl font-cabin font-bold italic text-light '>What I am interested in</h1>
+                                <h1 className='text-xl font-cabin font-bold italic text-light '>My interests</h1>
                                 <p className='text-light font-cabin text-base leading-10'>Besides my fascination of the intersection of technology and psychology, I love a long run in Regent&apos;s Park during the summer. I also love boxing and playing the guitar in my spare time. Would it surprise you to know that I was a national champion boxer in Taiwan?</p>
                             </motion.div>
                             <motion.div initial={{opacity: 0, x:100}} whileInView={{opacity: 1, x:0}} transition={{duration: 1, delay: .5}} viewport={{once: true}} className='border-r-4 border-main pr-10 flex justify-end w-full'>
@@ -73,7 +73,7 @@ const AboutPage = () => {
                                 <Image src={Image3} alt='Image3' className='w-full h-full object-cover object-center rounded-xl' />
                             </div>
                             <div>
-                                <h1 className='text-[2.5rem] font-cabin font-bold italic text-light'>What I am interested in</h1>
+                                <h1 className='text-[2.5rem] font-cabin font-bold italic text-light'>My interests</h1>
                                 <p className='text-light font-cabin text-[1rem] pr-5 leading-8'>Besides my fascination of the intersection of technology and psychology, I love a long run in Regent&apos;s Park during the summer. I also love boxing and playing the guitar in my spare time. Would it surprise you to know that I was a national champion boxer in Taiwan?</p>
                             </div>
                         </div>
