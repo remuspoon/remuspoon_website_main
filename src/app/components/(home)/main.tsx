@@ -7,7 +7,7 @@ import ParallaxText from '../parallaxText'
 const Main = () => {
     return (
         <div className='h-screen w-full overflow-hidden'>
-            <div className=' h-4/5 w-full select-none pt-20 pb-5 flex flex-col justify-between relative'>
+            <div className=' h-4/5 w-full select-none pt-5 pb-5 flex flex-col justify-between relative'>
                 <div className='z-20'>
                     <ParallaxText baseVelocity={.5} color="light" outline={false}>Remus Poon</ParallaxText>
                 </div>
