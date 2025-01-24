@@ -1,10 +1,18 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Hero from '../../../assets/home/Hero.jpg'
 import ScrollText from './scrollText'
 import ParallaxText from '../parallaxText'
 
 const Main = () => {
+    const [height, setHeight] = useState(0);
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            const height = window.innerHeight;
+            setHeight(height);
+        });
+    }, []);
     return (
         <div className='h-screen w-full overflow-hidden'>
             <div className=' h-4/5 w-full select-none pt-5 pb-5 flex flex-col justify-between relative'>
@@ -48,15 +56,19 @@ const Main = () => {
                 </div>
             </div>
             <div className='h-1/5 w-full bg-dark grid grid-cols-2 lg:grid-cols-5 gap-x-5 px-5 pt-5 overflow-hidden'>
-            <div className= 'col-start-1 col-span-2 flex flex-col justify-end'>
-                    {/* Scroll Animation*/}
-                    <div className='flex flex-col justify-center text-center'>
-                        <ScrollText />
-                    </div>
-                    <div className='grid grid-cols-2'>
-                        <div className='col-span-1 h-56 md:h-64 lg:h-40 mt-5 border-accent border-r-2'></div>
-                    </div>
+            { height > 700 ? (
+                <div className= 'col-start-1 col-span-2 flex flex-col justify-end'>
+                {/* Scroll Animation*/}
+                <div className='flex flex-col justify-center text-center'>
+                    <ScrollText />
                 </div>
+                <div className='grid grid-cols-2'>
+                    <div className='col-span-1 h-56 md:h-64 lg:h-40 mt-5 border-accent border-r-2'></div>
+                </div>
+            </div>
+            ) : (
+                <div></div>
+            )}
             </div>
         </div>
     );
