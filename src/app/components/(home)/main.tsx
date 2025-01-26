@@ -8,11 +8,21 @@ import ParallaxText from '../parallaxText'
 const Main = () => {
     const [height, setHeight] = useState(0);
     useEffect(() => {
-        window.addEventListener('resize', () => {
+        // Get initial height
+        const updateHeight = () => {
             const height = window.innerHeight;
             setHeight(height);
-        });
-    }, []);
+        };
+        
+        // Set initial height
+        updateHeight();
+        
+        // Add event listener
+        window.addEventListener('resize', updateHeight);
+        
+        // Cleanup
+        return () => window.removeEventListener('resize', updateHeight);
+    }, []); // Empty dependency array means this only runs once on mount
     return (
         <div className='h-screen w-full overflow-hidden'>
             <div className=' h-4/5 w-full select-none pt-5 pb-5 flex flex-col justify-between relative'>
@@ -56,7 +66,7 @@ const Main = () => {
                 </div>
             </div>
             <div className='h-1/5 w-full bg-dark grid grid-cols-2 lg:grid-cols-5 gap-x-5 px-5 pt-5 overflow-hidden'>
-            { height > 700 ? (
+            { height > 750 ? (
                 <div className= 'col-start-1 col-span-2 flex flex-col justify-end'>
                 {/* Scroll Animation*/}
                 <div className='flex flex-col justify-center text-center'>
