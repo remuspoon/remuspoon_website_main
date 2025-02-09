@@ -1,9 +1,21 @@
 import './globals.css'
 import Navbar from './navbar/navbar'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Remus Poon',
   description: 'Remus Poon Blog',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'icon',
+      url: '/favicon-32x32.png',
+      sizes: '32x32',
+      type: 'image/png'
+    }
+  }
 }
 
 export default function RootLayout({

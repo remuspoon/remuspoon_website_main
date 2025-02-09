@@ -64,7 +64,7 @@ const Navbar = () => {
     }, [isHomePage]);
 
     return (
-        <div className='lg:sticky grid grid-cols-2 md:grid-cols-12 gap-5 w-full top-0 z-50 px-5 py-5 w-full'>
+        <div className='lg:sticky grid grid-cols-2 md:grid-cols-12 gap-5 top-0 z-50 px-5 py-5 w-full'>
             <div className='col-start-1 flex items-center space-x-5 justify-start lg:justify-center'>
                 <Link href="/" onClick={handleLogoClick} className={`${isOverMain ? 'pointer-events-none' : ''}`}>
                     <h1 
