@@ -49,14 +49,18 @@ const BlogPage = () => {
     const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1])
     const titleY = useTransform(scrollYProgress, [0, 0.2], [-50, 0])
     
-    const cardTransforms = Array.from({ length: 4 }).map((_, index) => {
-        const start = 0.1 + (index * 0.1);
-        const end = start + 0.2;
-        return {
-            opacity: useTransform(scrollYProgress, [start, end], [0, 1]),
-            y: useTransform(scrollYProgress, [start, end], [50, 0])
-        };
-    });
+    // Create transforms for each card individually
+    const card1Opacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
+    const card1Y = useTransform(scrollYProgress, [0.1, 0.3], [50, 0])
+    
+    const card2Opacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1])
+    const card2Y = useTransform(scrollYProgress, [0.2, 0.4], [50, 0])
+    
+    const card3Opacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
+    const card3Y = useTransform(scrollYProgress, [0.3, 0.5], [50, 0])
+    
+    const card4Opacity = useTransform(scrollYProgress, [0.4, 0.6], [0, 1])
+    const card4Y = useTransform(scrollYProgress, [0.4, 0.6], [50, 0])
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -95,8 +99,14 @@ const BlogPage = () => {
                                         <motion.div
                                             key={index}
                                             style={{
-                                                opacity: cardTransforms[index]?.opacity,
-                                                y: cardTransforms[index]?.y
+                                                opacity: index === 0 ? card1Opacity : 
+                                                        index === 1 ? card2Opacity :
+                                                        index === 2 ? card3Opacity :
+                                                        card4Opacity,
+                                                y: index === 0 ? card1Y :
+                                                   index === 1 ? card2Y :
+                                                   index === 2 ? card3Y :
+                                                   card4Y
                                             }}
                                         >
                                             <BlogCard 
@@ -116,8 +126,14 @@ const BlogPage = () => {
                                         <motion.div 
                                             key={index}
                                             style={{ 
-                                                opacity: cardTransforms[index]?.opacity,
-                                                y: cardTransforms[index]?.y
+                                                opacity: index === 0 ? card1Opacity : 
+                                                        index === 1 ? card2Opacity :
+                                                        index === 2 ? card3Opacity :
+                                                        card4Opacity,
+                                                y: index === 0 ? card1Y :
+                                                   index === 1 ? card2Y :
+                                                   index === 2 ? card3Y :
+                                                   card4Y
                                             }}
                                         >
                                             <BlogCard 
@@ -138,8 +154,14 @@ const BlogPage = () => {
                                         <motion.div
                                             key={index}
                                             style={{ 
-                                                opacity: cardTransforms[index]?.opacity,
-                                                y: cardTransforms[index]?.y
+                                                opacity: index === 0 ? card1Opacity : 
+                                                        index === 1 ? card2Opacity :
+                                                        index === 2 ? card3Opacity :
+                                                        card4Opacity,
+                                                y: index === 0 ? card1Y :
+                                                   index === 1 ? card2Y :
+                                                   index === 2 ? card3Y :
+                                                   card4Y
                                             }}
                                         >
                                             <BlogCard 
@@ -160,8 +182,14 @@ const BlogPage = () => {
                                         <motion.div
                                             key={index}
                                             style={{ 
-                                                opacity: cardTransforms[index]?.opacity,
-                                                y: cardTransforms[index]?.y
+                                                opacity: index === 0 ? card1Opacity : 
+                                                        index === 1 ? card2Opacity :
+                                                        index === 2 ? card3Opacity :
+                                                        card4Opacity,
+                                                y: index === 0 ? card1Y :
+                                                   index === 1 ? card2Y :
+                                                   index === 2 ? card3Y :
+                                                   card4Y
                                             }}
                                         >
                                             <BlogCard 

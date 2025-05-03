@@ -13,29 +13,37 @@ const AboutPage = () => {
         offset: ["start 0.6", "end 0.5"]
     })
 
-    // Create transforms for each row
-    const rowTransforms = Array.from({ length: 3 }).map((_, index) => {
-        const start = 0.1 + (index * 0.2)
-        const end = start + 0.2
-        return {
-            leftOpacity: useTransform(scrollYProgress, [start, end], [0, 1]),
-            leftX: useTransform(scrollYProgress, [start, end], [-100, 0]),
-            rightOpacity: useTransform(scrollYProgress, [start, end], [0, 1]),
-            rightX: useTransform(scrollYProgress, [start, end], [100, 0])
-        }
-    })
+    // Create transforms for each row individually
+    const row1LeftOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
+    const row1LeftX = useTransform(scrollYProgress, [0.1, 0.3], [-100, 0])
+    const row1RightOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
+    const row1RightX = useTransform(scrollYProgress, [0.1, 0.3], [100, 0])
 
-    // Create transforms for mobile layouts
-    const mobileTransforms = Array.from({ length: 3 }).map((_, index) => {
-        const start = 0.1 + (index * 0.2)
-        const end = start + 0.2
-        return {
-            imageOpacity: useTransform(scrollYProgress, [start, end], [0, 1]),
-            imageX: useTransform(scrollYProgress, [start, end], [100, 0]),
-            textOpacity: useTransform(scrollYProgress, [start, end], [0, 1]),
-            textX: useTransform(scrollYProgress, [start, end], [-100, 0])
-        }
-    })
+    const row2LeftOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
+    const row2LeftX = useTransform(scrollYProgress, [0.3, 0.5], [-100, 0])
+    const row2RightOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
+    const row2RightX = useTransform(scrollYProgress, [0.3, 0.5], [100, 0])
+
+    const row3LeftOpacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1])
+    const row3LeftX = useTransform(scrollYProgress, [0.5, 0.7], [-100, 0])
+    const row3RightOpacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1])
+    const row3RightX = useTransform(scrollYProgress, [0.5, 0.7], [100, 0])
+
+    // Create transforms for mobile layouts individually
+    const mobile1ImageOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
+    const mobile1ImageX = useTransform(scrollYProgress, [0.1, 0.3], [100, 0])
+    const mobile1TextOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
+    const mobile1TextX = useTransform(scrollYProgress, [0.1, 0.3], [-100, 0])
+
+    const mobile2ImageOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
+    const mobile2ImageX = useTransform(scrollYProgress, [0.3, 0.5], [100, 0])
+    const mobile2TextOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1])
+    const mobile2TextX = useTransform(scrollYProgress, [0.3, 0.5], [-100, 0])
+
+    const mobile3ImageOpacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1])
+    const mobile3ImageX = useTransform(scrollYProgress, [0.5, 0.7], [100, 0])
+    const mobile3TextOpacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1])
+    const mobile3TextX = useTransform(scrollYProgress, [0.5, 0.7], [-100, 0])
 
     return (
         <div className='bg-gray w-full overflow-hidden' ref={containerRef}>
@@ -51,8 +59,8 @@ const AboutPage = () => {
                         <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[0].leftOpacity,
-                                    x: rowTransforms[0].leftX
+                                    opacity: row1LeftOpacity,
+                                    x: row1LeftX
                                 }}
                             >
                                 <h1 className='text-xl font-cabin font-bold italic text-light '>Who am I</h1>
@@ -60,8 +68,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[0].rightOpacity,
-                                    x: rowTransforms[0].rightX
+                                    opacity: row1RightOpacity,
+                                    x: row1RightX
                                 }}
                                 className='border-r-4 border-main pr-10 flex justify-end w-full'
                             >
@@ -71,8 +79,8 @@ const AboutPage = () => {
                         <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[1].leftOpacity,
-                                    x: rowTransforms[1].leftX
+                                    opacity: row2LeftOpacity,
+                                    x: row2LeftX
                                 }}
                                 className='border-l-4 border-main pl-10 flex justify-start w-full'
                             >
@@ -80,8 +88,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[1].rightOpacity,
-                                    x: rowTransforms[1].rightX
+                                    opacity: row2RightOpacity,
+                                    x: row2RightX
                                 }}
                             >
                                 <h1 className='text-xl font-cabin font-bold italic text-light '>What I do</h1>
@@ -91,8 +99,8 @@ const AboutPage = () => {
                         <div className='grid grid-cols-2 justify-between items-center gap-x-32'>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[2].leftOpacity,
-                                    x: rowTransforms[2].leftX
+                                    opacity: row3LeftOpacity,
+                                    x: row3LeftX
                                 }}
                             >
                                 <h1 className='text-xl font-cabin font-bold italic text-light '>My interests</h1>
@@ -100,8 +108,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div 
                                 style={{ 
-                                    opacity: rowTransforms[2].rightOpacity,
-                                    x: rowTransforms[2].rightX
+                                    opacity: row3RightOpacity,
+                                    x: row3RightX
                                 }}
                                 className='border-r-4 border-main pr-10 flex justify-end w-full'
                             >
@@ -115,8 +123,8 @@ const AboutPage = () => {
                         <div className='flex flex-col justify-between items-center gap-y-5 pb-10'>
                             <motion.div 
                                 style={{ 
-                                    opacity: mobileTransforms[0].imageOpacity,
-                                    x: mobileTransforms[0].imageX
+                                    opacity: mobile1ImageOpacity,
+                                    x: mobile1ImageX
                                 }}
                                 className='pr-5 md:pr-10 border-r-4 border-main'
                             >
@@ -124,8 +132,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div
                                 style={{ 
-                                    opacity: mobileTransforms[0].textOpacity,
-                                    x: mobileTransforms[0].textX
+                                    opacity: mobile1TextOpacity,
+                                    x: mobile1TextX
                                 }}
                             >
                                 <h1 className='text-[2.5rem] font-cabin font-bold italic text-light'>Who am I</h1>
@@ -135,8 +143,8 @@ const AboutPage = () => {
                         <div className='flex flex-col justify-between items-center gap-y-5 pb-10'>
                             <motion.div 
                                 style={{ 
-                                    opacity: mobileTransforms[1].imageOpacity,
-                                    x: mobileTransforms[1].imageX
+                                    opacity: mobile2ImageOpacity,
+                                    x: mobile2ImageX
                                 }}
                                 className='pl-5 md:pl-10 border-l-4 border-main'
                             >
@@ -144,8 +152,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div
                                 style={{ 
-                                    opacity: mobileTransforms[1].textOpacity,
-                                    x: mobileTransforms[1].textX
+                                    opacity: mobile2TextOpacity,
+                                    x: mobile2TextX
                                 }}
                             >
                                 <h1 className='text-[2.5rem] font-cabin font-bold italic text-light'>What I do</h1>
@@ -155,8 +163,8 @@ const AboutPage = () => {
                         <div className='flex flex-col justify-between items-center gap-y-5'>
                             <motion.div 
                                 style={{ 
-                                    opacity: mobileTransforms[2].imageOpacity,
-                                    x: mobileTransforms[2].imageX
+                                    opacity: mobile3ImageOpacity,
+                                    x: mobile3ImageX
                                 }}
                                 className='pr-5 md:pr-10 border-r-4 border-main'
                             >
@@ -164,8 +172,8 @@ const AboutPage = () => {
                             </motion.div>
                             <motion.div
                                 style={{ 
-                                    opacity: mobileTransforms[2].textOpacity,
-                                    x: mobileTransforms[2].textX
+                                    opacity: mobile3TextOpacity,
+                                    x: mobile3TextX
                                 }}
                             >
                                 <h1 className='text-[2.5rem] font-cabin font-bold italic text-light'>My interests</h1>
