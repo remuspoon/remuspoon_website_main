@@ -13,6 +13,9 @@ const AboutPage = () => {
         offset: ["start 0.6", "end 0.5"]
     })
 
+    const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1])
+    const titleY = useTransform(scrollYProgress, [0, 0.2], [-50, 0])
+
     // Create transforms for each row individually
     const row1LeftOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
     const row1LeftX = useTransform(scrollYProgress, [0.1, 0.3], [-100, 0])
@@ -49,9 +52,14 @@ const AboutPage = () => {
         <div className='bg-gray w-full overflow-hidden' ref={containerRef}>
             <div className='flex flex-col justify-center items-center'>
                 <div className='py-10 lg:py-32'>
-                    <h1 id='about' className='text-[5rem] md:text-[8rem] lg:text-2xl font-abril text-light tracking-tighter drop-shadow-md'>ABOUT
+                    <motion.h1 
+                        id='about' 
+                        style={{ opacity: titleOpacity, y: titleY }}
+                        className='text-[5rem] md:text-[8rem] lg:text-2xl font-abril text-light tracking-tighter drop-shadow-md'
+                    >
+                        ABOUT
                         <span className='text-main'>.</span>
-                    </h1>
+                    </motion.h1>
                 </div>
                 <div className='grid grid-cols-12 gap-x-5 px-5 w-screen pb-32'>
                     {/* Large Screen About Page */}
