@@ -89,12 +89,12 @@ function AnimatedBody({ body }: { body: PortableTextBlock[] }) {
             // Show container once fonts are loaded
             containerRef.current.style.visibility = "visible"
 
-            // Select all text elements to animate
-            const paragraphs = containerRef.current.querySelectorAll("p, a, h1, h2, h3, h4, h5, h6, ul, ol, li")
+            // Select only block-level elements to animate (exclude links)
+            const blocks = containerRef.current.querySelectorAll("p, h1, h2, h3, h4, h5, h6, ul, ol, li, blockquote")
             
-            // Animate each element with a staggered fade-in and slide-up effect
+            // Animate each block element with a staggered fade-in and slide-up effect
             animate(
-                paragraphs,
+                blocks,
                 { opacity: [0, 1], y: [20, 0] },
                 {
                     type: "spring",
