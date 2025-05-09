@@ -124,7 +124,7 @@ const BlogPage = () => {
                                 <div className='hidden xl:hidden lg:grid lg:grid-cols-3 w-full justify-between'>
                                     {blogs.slice(0, 3).map((post, index) => (
                                         <motion.div 
-                                            key={index}
+                                        key={index}
                                             style={{ 
                                                 opacity: index === 0 ? card1Opacity : 
                                                         index === 1 ? card2Opacity :
@@ -167,12 +167,12 @@ const BlogPage = () => {
                                             <BlogCard 
                                                 key={index} 
                                                 title={formatTitle(post.title)} 
-                                                description={formatDescription(post.description)} 
-                                                publishedAt={formatDate(post.publishedAt)} 
-                                                mainImage={urlFor(post.mainImage).url()} 
-                                                currentSlug={post.currentSlug}
-                                                hoverShadow={true}
-                                            />
+                                            description={formatDescription(post.description)} 
+                                            publishedAt={formatDate(post.publishedAt)} 
+                                            mainImage={urlFor(post.mainImage).url()} 
+                                            currentSlug={post.currentSlug}
+                                            hoverShadow={true}
+                                        />
                                         </motion.div>
                                     ))}
                                 </div>
@@ -195,7 +195,7 @@ const BlogPage = () => {
                                             <BlogCard 
                                                 key={index} 
                                                 title={formatTitle(post.title)} 
-                                                description={formatDescription(post.description)} 
+                                            description={formatDescription(post.description)} 
                                                 publishedAt={formatDate(post.publishedAt)} 
                                                 mainImage={urlFor(post.mainImage).url()} 
                                                 currentSlug={post.currentSlug}
