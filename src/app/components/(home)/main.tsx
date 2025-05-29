@@ -66,7 +66,7 @@ const Main = () => {
                 </div>
             </div>
             <div className='h-1/5 w-full bg-dark grid grid-cols-2 lg:grid-cols-5 gap-x-5 px-5 pt-5 overflow-hidden'>
-            { height > 750 ? (
+            { height > 800 ? (
                 <div className= 'col-start-1 col-span-2 flex flex-col justify-end'>
                 {/* Scroll Animation*/}
                 <div className='flex flex-col justify-center text-center'>

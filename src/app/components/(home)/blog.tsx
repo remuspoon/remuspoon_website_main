@@ -80,14 +80,18 @@ const BlogPage = () => {
                 </div>
             </div>
             <div className='grid grid-cols-12 gap-x-5 px-5 bg-light overflow-x-clip'>
-                <div className='col-start-1 col-span-12 lg:col-start-2 lg:col-span-10'>
+                <div className='col-start-1 col-span-12 lg:col-start-2 lg:col-span-10  max-w-[1440px] mx-auto'>
                     <div className='flex flex-col'>
                         <motion.div 
                             style={{ opacity: titleOpacity, y: titleY }}
-                            className='w-full h-full text-white'
+                            className='hidden lg:block w-full h-full text-white'
                         >
-                            <h1 className='text-[5rem] md:text-[8rem] lg:text-2xl font-abril text-gray drop-shadow-md tracking-tighter pt-10 lg:pt-0'>BLOGS<span className='text-accent'>.</span></h1>
+                            <h1 className='text-2xl font-abril text-gray drop-shadow-md tracking-tighter'>BLOGS<span className='text-accent'>.</span></h1>
                         </motion.div>
+                        {/* Mobile title - static */}
+                        <div className='lg:hidden w-full h-full text-white'>
+                            <h1 className='text-[5rem] md:text-[8rem] font-abril text-gray drop-shadow-md tracking-tighter pt-10'>BLOGS<span className='text-accent'>.</span></h1>
+                        </div>
                         <div className='flex flex-col gap-y-16'>
                             <div className='flex flex-col lg:flex-row w-full justify-between'>
                                 {/* XL screen blogs */}
@@ -179,29 +183,17 @@ const BlogPage = () => {
                                 {/* Small screen blogs */}
                                 <div className='flex flex-col md:hidden w-full gap-y-8'>
                                     {blogs.slice(0, 3).map((post, index) => (
-                                        <motion.div
-                                            key={index}
-                                            style={{ 
-                                                opacity: index === 0 ? card1Opacity : 
-                                                        index === 1 ? card2Opacity :
-                                                        index === 2 ? card3Opacity :
-                                                        card4Opacity,
-                                                y: index === 0 ? card1Y :
-                                                   index === 1 ? card2Y :
-                                                   index === 2 ? card3Y :
-                                                   card4Y
-                                            }}
-                                        >
+                                        <div key={index}>
                                             <BlogCard 
                                                 key={index} 
                                                 title={formatTitle(post.title)} 
-                                            description={formatDescription(post.description)} 
+                                                description={formatDescription(post.description)} 
                                                 publishedAt={formatDate(post.publishedAt)} 
                                                 mainImage={urlFor(post.mainImage).url()} 
                                                 currentSlug={post.currentSlug}
                                                 hoverShadow={true}
                                             />
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
